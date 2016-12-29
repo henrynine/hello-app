@@ -28,6 +28,11 @@ gem 'jbuilder', '2.4.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  #use PostgreSQL in production because of Heroku
+  gem 'pg', '0.18.4'
+end
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
